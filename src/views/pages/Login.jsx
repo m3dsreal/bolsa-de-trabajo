@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 // reactstrap components
 import {
@@ -7,8 +7,6 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  Label,
-  FormGroup,
   Form,
   Input,
   InputGroupAddon,
@@ -18,6 +16,7 @@ import {
   Col,
   Row
 } from "reactstrap";
+import AuthNavbar from "components/Navbars/AuthNavbar.jsx";
 
 class Login extends React.Component {
   componentDidMount() {
@@ -28,76 +27,65 @@ class Login extends React.Component {
   }
   render() {
     return (
-      <div className="login-page">
-        <Container>
-          <Row>
-            <Col className="ml-auto mr-auto" lg="4" md="6">
-              <Form action="" className="form" method="">
-                <Card className="card-login">
-                  <CardHeader>
+      <Fragment>
+        <AuthNavbar />
+        <div className="login-page">
+          <Container>
+            <Row>
+              <Col className="ml-auto mr-auto" lg="4" md="6">
+                <Form action="" className="form" method="">
+                  <Card className="card-login">
                     <CardHeader>
-                      <h3 className="header text-center">Login</h3>
+                      <CardHeader>
+                        <h3 className="header text-center">Login</h3>
+                      </CardHeader>
                     </CardHeader>
-                  </CardHeader>
-                  <CardBody>
-                    <InputGroup>
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="nc-icon nc-single-02" />
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input placeholder="First Name..." type="text" />
-                    </InputGroup>
-                    <InputGroup>
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="nc-icon nc-key-25" />
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Password"
-                        type="password"
-                        autoComplete="off"
-                      />
-                    </InputGroup>
-                    <br />
-                    <FormGroup>
-                      <FormGroup check>
-                        <Label check>
-                          <Input
-                            defaultChecked
-                            defaultValue=""
-                            type="checkbox"
-                          />
-                          <span className="form-check-sign" />
-                          Subscribe to newsletter
-                        </Label>
-                      </FormGroup>
-                    </FormGroup>
-                  </CardBody>
-                  <CardFooter>
-                    <Button
-                      block
-                      className="btn-round mb-3"
-                      color="warning"
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                    >
-                      Get Started
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Form>
-            </Col>
-          </Row>
-        </Container>
-        <div
-          className="full-page-background"
-          style={{
-            backgroundImage: `url(${require("assets/img/bg/fabio-mangione.jpg")})`
-          }}
-        />
-      </div>
+                    <CardBody>
+                      <InputGroup>
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="nc-icon nc-single-02" />
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input placeholder="First Name..." type="text" />
+                      </InputGroup>
+                      <InputGroup className='mb-1'>
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="nc-icon nc-key-25" />
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input
+                          placeholder="Password"
+                          type="password"
+                          autoComplete="off"
+                        />
+                      </InputGroup>
+                    </CardBody>
+                    <CardFooter>
+                      <Button
+                        block
+                        className="btn-round mb-3"
+                        color="primary"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                      >
+                        Get Started
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </Form>
+              </Col>
+            </Row>
+          </Container>
+          <div
+            className="full-page-background"
+            style={{
+              backgroundImage: `url(${require("assets/img/bg/jan-sendereks.jpg")})`
+            }}
+          />
+        </div>
+      </Fragment>
     );
   }
 }

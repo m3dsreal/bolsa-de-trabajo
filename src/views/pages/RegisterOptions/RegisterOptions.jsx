@@ -87,7 +87,7 @@ class RegisterOption extends React.Component {
         <div
           className="full-page-background"
           style={{
-            backgroundImage: `url(${require("assets/img/bg/fabio-mangione.jpg")})`
+            backgroundImage: `url(${require("assets/img/bg/jan-sendereks.jpg")})`
           }}
         />
       </div>

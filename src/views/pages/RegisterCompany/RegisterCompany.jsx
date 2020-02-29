@@ -23,16 +23,8 @@ class RegisterCompany extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      design: false,
-      code: false,
-      develop: false
     };
   }
-  clickChoice = choiceName => {
-    this.setState({
-      [choiceName]: !this.state[choiceName]
-    });
-  };
   componentDidMount() {
     document.body.classList.toggle("login-page");
   }
