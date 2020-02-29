@@ -30,6 +30,10 @@
   },
   "homepage": "https://github.com/creativetimofficial/paper-dashboard-pro-react#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@material-ui/core": "^4.9.2",
     "@types/googlemaps": "3.30.16",
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "16.7.1",

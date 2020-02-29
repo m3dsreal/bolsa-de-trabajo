@@ -1,13 +1,13 @@
 import React from "react";
 import classnames from "classnames";
-import { NavLink } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
 
 // reactstrap components
 import {
   Collapse,
-  NavbarBrand,
+  // NavbarBrand,
   Navbar,
-  NavItem,
+  // NavItem,
   Nav,
   Container
 } from "reactstrap";
@@ -45,9 +45,11 @@ class AuthNavbar extends React.Component {
       >
         <Container>
           <div className="navbar-wrapper">
-            <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
-              Paper Dashboard PRO React
-            </NavbarBrand>
+            {/*
+              <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                Paper Dashboard PRO React
+              </NavbarBrand>
+            */}
           </div>
           <button
             aria-controls="navigation-index"
@@ -68,6 +70,7 @@ class AuthNavbar extends React.Component {
             navbar
           >
             <Nav navbar>
+            {/*
               <NavItem>
                 <NavLink to="/admin/dashboard" className="nav-link">
                   <i className="nc-icon nc-layout-11" />
@@ -98,6 +101,7 @@ class AuthNavbar extends React.Component {
                   Lock
                 </NavLink>
               </NavItem>
+            */}
             </Nav>
           </Collapse>
         </Container>

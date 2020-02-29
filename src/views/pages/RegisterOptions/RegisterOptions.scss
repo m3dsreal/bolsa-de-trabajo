@@ -1,0 +1,52 @@
+.register-options{
+
+  .circle-container{
+    background-color: white;
+    border: 1px solid #c7c7c7;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    justify-self: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card-icons{
+      width: 45px;
+      height: 43px;
+      color: #c7c7c7 !important;
+    }
+
+    &:hover {
+      border: 1px solid #34B5B8 !important;
+      transition: all 150ms linear;
+
+      .card-icons{
+        color: #34B5B8 !important;
+        transition: all 150ms linear;
+      }
+    }
+  }
+
+
+
+  .col-card-container{
+    justify-content: center;
+    display: grid;
+    padding: 0px 30px;
+  }
+
+  .card-label{
+    font-size: 16px;
+    font-weight: 600;
+    color: #66615B;
+    text-transform: capitalize;
+    cursor: pointer !important;
+    margin-bottom: 20px;
+  }
+
+
+}

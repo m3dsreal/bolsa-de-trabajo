@@ -25,6 +25,10 @@ import VectorMap from "views/maps/VectorMap.jsx";
 import Widgets from "views/Widgets.jsx";
 import Wizard from "views/forms/Wizard.jsx";
 
+import RegisterOptions from "views/pages/RegisterOptions/RegisterOptions.jsx";
+import RegisterCompany from "views/pages/RegisterCompany/RegisterCompany.jsx";
+import RegisterCandidate from "views/pages/RegisterCandidate/RegisterCandidate.jsx";
+
 const routes = [
   {
     path: "/dashboard",
@@ -51,6 +55,27 @@ const routes = [
         name: "Login",
         mini: "L",
         component: Login,
+        layout: "/auth"
+      },
+      {
+        path: "/register-options",
+        name: "Register Options",
+        mini: "RO",
+        component: RegisterOptions,
+        layout: "/auth"
+      },
+      {
+        path: "/register-company",
+        name: "Register Company",
+        mini: "RC",
+        component: RegisterCompany,
+        layout: "/auth"
+      },
+      {
+        path: "/register-candidate",
+        name: "Register Candidate",
+        mini: "RCan",
+        component: RegisterCandidate,
         layout: "/auth"
       },
       {
