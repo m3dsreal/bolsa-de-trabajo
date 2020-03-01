@@ -27,6 +27,29 @@
         z-index: 4;
         padding-bottom: 100px;
 
+        &__header{
+            width: 100%;
+            background-color: #FFFFFF;
+            color: #333;
+            text-align: center;
+        }
+
+        .filter-box {
+            width: 90%;
+            margin: 0 auto; 
+            border-radius: 5px;
+            background-color: $default-bg;
+            margin-bottom: 10px;
+
+            .list-date {
+                width: 90%;
+                margin: 0 auto;
+                max-height: 200px;
+                overflow:scroll;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
         .dropdown .dropdown-backdrop{
           display: none !important;
         }

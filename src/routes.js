@@ -25,31 +25,35 @@ import VectorMap from "views/maps/VectorMap.jsx";
 import Widgets from "views/Widgets.jsx";
 import Wizard from "views/forms/Wizard.jsx";
 
+import JobList from "views/Dashboard/JobList.jsx";
+import JobDetails from "views/JobDetails/JobDetails.jsx";
 import RegisterOptions from "views/pages/RegisterOptions/RegisterOptions.jsx";
 import RegisterCompany from "views/pages/RegisterCompany/RegisterCompany.jsx";
 import RegisterCandidate from "views/pages/RegisterCandidate/RegisterCandidate.jsx";
 
-const routes = [
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: "nc-icon nc-bank",
-    component: Dashboard,
-    layout: "/admin"
-  },
+/* export const publicRoutes = [
+    {
+        path: "/dashboard",
+        name: "Job List",
+        icon: "nc-icon nc-bank",
+        component: JobList,
+        layout: "/public"
+    },
+    {
+        path: "/job/:id",
+        name: "Job",
+        component: JobDetails,
+        layout: "/public"
+    },
+] */
+
+export const routes = [
   {
     collapse: true,
     name: "Pages",
     icon: "nc-icon nc-book-bookmark",
     state: "pagesCollapse",
     views: [
-      // {
-      //   path: "/timeline",
-      //   name: "Timeline",
-      //   mini: "T",
-      //   component: Timeline,
-      //   layout: "/admin"
-      // },
       {
         path: "/login",
         name: "Login",
@@ -277,5 +281,3 @@ const routes = [
     layout: "/admin"
   }
 ];
-
-export default routes;

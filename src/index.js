@@ -3,22 +3,27 @@ import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 
-import AuthLayout from "layouts/Auth/Auth.jsx";
-import AdminLayout from "layouts/Admin/Admin.jsx";
+import { createStore, applyMiddleware} from 'redux'
+import { Provider } from 'react-redux'
+import thunk from 'redux-thunk'
+import rootReducer from './store/reducers/rootReducer'
 
 import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/paper-dashboard.scss";
 import "assets/demo/demo.css";
 
+import Dashboard from "./views/Dashboard/index.jsx";
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/auth" render={props => <AuthLayout {...props} />} />
-      <Route path="/admin" render={props => <AdminLayout {...props} />} />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </Router>,
-  document.getElementById("root")
+    <Provider store={store}>
+        <Router history={hist}>
+            <Switch>
+            <Route path="/public" render={props => <Dashboard {...props} />} />
+            <Redirect to="/public/dashboard" />
+            </Switch>
+        </Router>,
+    </Provider>, document.getElementById("root")
 );
