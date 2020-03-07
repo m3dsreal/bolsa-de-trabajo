@@ -171,3 +171,10 @@ a.text-gray:focus, a.text-gray:hover{
         }
     }
 }
+
+.heading-filter {
+    border-radius: 5px 5px 0 0;
+    background-color: $default-states-color;
+    color: $white-color;
+    text-align: center;
+}

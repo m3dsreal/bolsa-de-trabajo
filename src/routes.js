@@ -1,7 +1,7 @@
 import Buttons from "views/components/Buttons.jsx";
 import Calendar from "views/Calendar.jsx";
 import Charts from "views/Charts.jsx";
-import Dashboard from "views/Dashboard.jsx";
+// import Dashboard from "views/Dashboard.jsx";
 import ExtendedForms from "views/forms/ExtendedForms.jsx";
 import ExtendedTables from "views/tables/ExtendedTables.jsx";
 import FullScreenMap from "views/maps/FullScreenMap.jsx";
@@ -17,7 +17,7 @@ import ReactTables from "views/tables/ReactTables.jsx";
 import RegularForms from "views/forms/RegularForms.jsx";
 import RegularTables from "views/tables/RegularTables.jsx";
 import SweetAlert from "views/components/SweetAlert.jsx";
-// import Timeline from "views/pages/Timeline.jsx";
+import Timeline from "views/pages/Timeline.jsx";
 import Typography from "views/components/Typography.jsx";
 // import UserProfile from "views/pages/UserProfile.jsx";
 import ValidationForms from "views/forms/ValidationForms.jsx";
@@ -25,9 +25,28 @@ import VectorMap from "views/maps/VectorMap.jsx";
 import Widgets from "views/Widgets.jsx";
 import Wizard from "views/forms/Wizard.jsx";
 
+import Dashboard from "views/Dashboard";
+//import JobList from "views/Dashboard/JobList";
+// import JobDetails from "views/JobDetails/JobDetails";
 import RegisterOptions from "views/pages/RegisterOptions/RegisterOptions.jsx";
 import RegisterCompany from "views/pages/RegisterCompany/RegisterCompany.jsx";
 import RegisterCandidate from "views/pages/RegisterCandidate/RegisterCandidate.jsx";
+
+/* export const publicRoutes = [
+    {
+        path: "/dashboard",
+        name: "Job List",
+        icon: "nc-icon nc-bank",
+        component: JobList,
+        layout: "/public"
+    },
+    {
+        path: "/job/:id",
+        name: "Job",
+        component: JobDetails,
+        layout: "/public"
+    },
+] */
 
 const routes = [
   {
@@ -35,7 +54,7 @@ const routes = [
     name: "Dashboard",
     icon: "nc-icon nc-bank",
     component: Dashboard,
-    layout: "/admin"
+    layout: "/public"
   },
   {
     collapse: true,
@@ -43,13 +62,13 @@ const routes = [
     icon: "nc-icon nc-book-bookmark",
     state: "pagesCollapse",
     views: [
-      // {
-      //   path: "/timeline",
-      //   name: "Timeline",
-      //   mini: "T",
-      //   component: Timeline,
-      //   layout: "/admin"
-      // },
+      {
+        path: "/timeline",
+        name: "Timeline",
+        mini: "T",
+        component: Timeline,
+        layout: "/admin"
+      },
       {
         path: "/login",
         name: "Login",
