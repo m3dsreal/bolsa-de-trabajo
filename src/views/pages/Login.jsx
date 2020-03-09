@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { history } from '../../helpers/history.js';
+import { connect } from 'react-redux';
 // reactstrap components
 import {
   Button,
@@ -18,14 +18,17 @@ import {
 } from "reactstrap";
 import AuthNavbar from "components/Navbars/AuthNavbar.jsx";
 
-class Login extends React.Component {
+import { history } from '../../helpers/history.js';
+import { AUTH_ACTIONS } from '../../store/actions/authActions';
+//import { AUTH_SELECTORS } from '_selectors';
+
+class LoginView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       email: '',
       password: '',
     };
-    this.logIn = props.loginUserAccount;
   }
 
   // componentWillMount() {
@@ -50,8 +53,9 @@ class Login extends React.Component {
   handleFormSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = this.state;
-    this.logIn({ email, password })
+    this.props.loginUserAccount({ email, password })
       .then(response => {
+        console.log('entrandooo');
         this.redirectToHome();
       })
       .catch(err => err);
@@ -66,7 +70,7 @@ class Login extends React.Component {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" lg="4" md="6">
-                <Form className="form" onSubmit={this.redirectToDashboard}>
+                <Form className="form" onSubmit={this.handleFormSubmit}>
                   <Card className="card-login">
 
                     <CardHeader>
@@ -143,4 +147,14 @@ class Login extends React.Component {
   }
 }
 
+// const mapStateToProps = (state) => ({
+//   user: AUTH_SELECTORS.getAuth(state);
+// });
+
+const mapDispatchToProps = {
+  loginUserAccount: AUTH_ACTIONS.loginUserAccount,
+};
+
+const LoginRender = connect(null, mapDispatchToProps)(LoginView);
+const Login = () => <LoginRender />;
 export default Login;

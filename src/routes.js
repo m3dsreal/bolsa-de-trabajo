@@ -82,7 +82,6 @@ const routes = [
         mini: "RO",
         component: RegisterOptions,
         layout: "/auth",
-        hide: true,
       },
       {
         path: "/register-company",
@@ -90,7 +89,6 @@ const routes = [
         mini: "RC",
         component: RegisterCompany,
         layout: "/auth",
-        hide: true,
       },
       {
         path: "/register-candidate",
@@ -98,7 +96,6 @@ const routes = [
         mini: "RCan",
         component: RegisterCandidate,
         layout: "/auth",
-        hide: true,
       },
       // {
       //   path: "/register",
